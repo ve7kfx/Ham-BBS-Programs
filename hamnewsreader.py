@@ -1,5 +1,6 @@
 import subprocess
 import sys
+import os
 
 def display_disclaimer():
     print("Disclaimer: This program filters out copyrighted material. System operators are responsible for modifying the code as per their local laws and requirements.")
@@ -22,7 +23,9 @@ def main_menu():
     return choice
 
 def call_news_reader(script_name, search_query):
-    result = subprocess.run(['python', script_name, search_query], capture_output=True, text=True)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    script_path = os.path.join(current_dir, script_name)
+    result = subprocess.run(['python', script_path, search_query], capture_output=True, text=True)
     print(result.stdout)
 
 def main():
@@ -51,3 +54,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
