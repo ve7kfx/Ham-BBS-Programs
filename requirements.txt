@@ -1,0 +1,16 @@
+# requirements.txt
+
+# Requests, for making HTTP requests
+requests==2.28.1
+
+# BeautifulSoup, for parsing HTML and XML documents
+beautifulsoup4==4.11.1
+
+# Pillow (PIL Fork), for image processing
+Pillow==9.1.0
+
+# Colorama, for colored terminal text
+colorama==0.4.4
+
+# lxml, for parsing XML and HTML
+lxml==4.9.0
