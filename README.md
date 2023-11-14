@@ -16,7 +16,7 @@ Contributing
 Contributions to this project are welcome. If you have improvements or new features in mind, feel free to fork the repository and submit your pull requests. Please ensure your contributions align with the non-commercial ethos of this project.
 
 License
-This project is released under a non-commercial, attribution-required license. You are free to use, modify, and distribute the software as long as appropriate credit is given and it is not used for commercial purposes.
+You are free to use, modify, and distribute the software appropriate credit is appreciated. 
 
 Contact
 For any questions, support, or collaboration, please contact me at ve7kfx@gmail.com.
