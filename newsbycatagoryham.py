@@ -5,10 +5,12 @@ from io import BytesIO
 import colorama
 import textwrap
 
-CATEGORIES = ['Technology', 'Sports', 'World', 'Business', 'Entertainment', 'Science']
+CATEGORIES = ['Technology', 'Sports', 'World', 'Business', 'Entertainment', 'Science', 'Art', 'Breaking']
 
 def fetch_feed(category):
-    url = f"https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en&topic={category[0].lower()}"
+    """Fetches the news feed based on the selected category."""
+    formatted_category = category.replace(" ", "+")
+    url = f"https://news.google.com/rss/search?q={formatted_category}"
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'xml')
     articles = []
