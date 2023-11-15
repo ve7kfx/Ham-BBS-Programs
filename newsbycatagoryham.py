@@ -49,7 +49,8 @@ def image_to_ascii_art(url):
     pixels = image.getdata()
     ascii_str = ''
     for pixel in pixels:
-        index = pixel * len(ASCII_CHARS) // 256  # Corrected indexing formula
+        # Map the pixel value to a range of 0 to len(ASCII_CHARS) - 1
+        index = int((pixel / 255) * (len(ASCII_CHARS) - 1))
         ascii_str += ASCII_CHARS[index]
     ascii_str = '\n'.join([ascii_str[i:i+80] for i in range(0, len(ascii_str), 80)])
     return ascii_str
